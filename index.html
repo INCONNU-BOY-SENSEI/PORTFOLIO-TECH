@@ -126,7 +126,10 @@
           <button class="icon-btn" id="langToggle" aria-label="Change language">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9Z"/></svg>
           </button>
-          <div id="google_translate_element" class="gtranslate" aria-hidden="true"></div>
+          <div class="gtranslate">
+            <div id="google_translate_element"></div>
+            <button class="gtranslate__cookies mono" id="cookieSettingsLink">Cookie settings</button>
+          </div>
         </div>
         <button class="icon-btn" id="soundToggle" aria-label="Toggle sound" aria-pressed="true">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="snd-wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="snd-off" d="M16 9l5 6M21 9l-5 6"/></svg>
@@ -459,11 +462,6 @@
   <footer class="footer">
     <div class="wrap footer__inner mono">
       <span>© <span id="year"></span> Inconnu boy sensei</span>
-      <span class="footer__mid">Designed &amp; built by hand. No templates.</span>
-      <span class="footer__right">
-        <button class="footer__link" id="footerCookieLink">Cookie settings</button>
-        <a href="#top" class="footer__link">Back to top ↑</a>
-      </span>
     </div>
   </footer>
 
@@ -545,7 +543,7 @@
           <h3>Third-party providers</h3>
           <p>Google LLC operates Google Maps and Google Translate. Learn more in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
           <h3>Managing your choice</h3>
-          <p>You can accept, reject, or customize cookies at any time using the "Cookie settings" link in the footer. Rejecting third-party cookies disables the embedded map and the translation widget, but the rest of the site keeps working normally.</p>
+          <p>You can accept, reject, or customize cookies at any time using "Cookie settings" under the language (globe) button at the top of the page. Rejecting third-party cookies disables the embedded map and the translation widget, but the rest of the site keeps working normally.</p>
           <h3>Contact</h3>
           <p>Questions about this policy can be sent to <a href="mailto:inconnuboytech@gmail.com">inconnuboytech@gmail.com</a>.</p>
         </div>

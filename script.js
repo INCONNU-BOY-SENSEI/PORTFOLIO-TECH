@@ -303,7 +303,10 @@ document.getElementById("cookieReject").addEventListener("click", () => {
   hideBanner();
 });
 document.getElementById("cookieCustomize").addEventListener("click", openCookieModal);
-document.getElementById("footerCookieLink").addEventListener("click", openCookieModal);
+document.getElementById("cookieSettingsLink").addEventListener("click", () => {
+  langWrap.classList.remove("is-open");
+  openCookieModal();
+});
 document.getElementById("cookieModalClose").addEventListener("click", closeCookieModal);
 document.getElementById("cookieModalBackdrop").addEventListener("click", closeCookieModal);
 document.getElementById("cookieModalReject").addEventListener("click", () => {
