@@ -81,12 +81,26 @@
 </head>
 <body>
 
-  <div class="intro notranslate" id="intro" aria-hidden="true" translate="no">
-    <div class="intro__row">
-      <span class="intro__name">Inconnu boy sensei</span>
-      <span class="intro__count"><span id="introCount">000</span></span>
+  <div class="intro notranslate" id="intro" translate="no" role="dialog" aria-label="Intro">
+    <div class="intro__top">
+      <span class="intro__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="intro__path">guest@inconnuboy — zsh — 80×24</span>
+      <span class="intro__actions">
+        <button class="intro__btn" id="introMute" aria-pressed="false">sound: on</button>
+        <button class="intro__btn" id="introSkip">skip →</button>
+      </span>
     </div>
-    <div class="intro__bar"><span id="introBar"></span></div>
+    <div class="intro__log" id="introLog" aria-hidden="true"></div>
+    <div class="intro__stage" aria-hidden="true">
+      <p class="intro__name" id="introName"><span id="introNameText"></span><span class="intro__caret"></span></p>
+      <p class="intro__welcome" id="introWelcome"></p>
+      <p class="intro__sub" id="introSub">to the portfolio of Inconnu boy sensei</p>
+    </div>
+    <span class="intro__line" id="introLine" aria-hidden="true"></span>
+    <button class="intro__gate" id="introGate">
+      <span class="intro__gate-line">press any key to boot<span class="intro__caret"></span></span>
+      <span class="intro__gate-hint">sound on · or tap anywhere</span>
+    </button>
   </div>
 
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
@@ -114,6 +128,9 @@
           </button>
           <div id="google_translate_element" class="gtranslate" aria-hidden="true"></div>
         </div>
+        <button class="icon-btn" id="soundToggle" aria-label="Toggle sound" aria-pressed="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="snd-wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="snd-off" d="M16 9l5 6M21 9l-5 6"/></svg>
+        </button>
         <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg>
         </button>
@@ -169,7 +186,7 @@
 
     <section class="section" id="about">
       <div class="wrap grid">
-        <header class="section__head">
+        <header class="section__head" data-anim="cmd">
           <span class="index">01</span>
           <span class="label">About</span>
         </header>
@@ -185,12 +202,12 @@
 
     <section class="section" id="work">
       <div class="wrap grid">
-        <header class="section__head">
+        <header class="section__head" data-anim="cmd">
           <span class="index">02</span>
           <span class="label">Selected work</span>
         </header>
         <div class="section__body">
-          <h2 class="title" data-anim="lines">Built in the open.</h2>
+          <h2 class="title" data-anim="decode">Built in the open.</h2>
 
           <article class="feature feature--sky" data-anim="clip">
             <div class="feature__visual feature__visual--term" aria-hidden="true">
@@ -268,12 +285,12 @@
 
     <section class="section section--flush" id="stack">
       <div class="wrap grid">
-        <header class="section__head">
+        <header class="section__head" data-anim="cmd">
           <span class="index">03</span>
           <span class="label">Stack</span>
         </header>
         <div class="section__body">
-          <h2 class="title" data-anim="lines">Tools I reach for.</h2>
+          <h2 class="title" data-anim="decode">Tools I reach for.</h2>
         </div>
       </div>
       <div class="marquee notranslate" translate="no" data-marquee="1" aria-label="Technologies"><div class="marquee__track" id="marqueeA"></div></div>
@@ -282,12 +299,12 @@
 
     <section class="section" id="experience">
       <div class="wrap grid">
-        <header class="section__head">
+        <header class="section__head" data-anim="cmd">
           <span class="index">04</span>
           <span class="label">Experience</span>
         </header>
         <div class="section__body">
-          <h2 class="title" data-anim="lines">Where the work has gone.</h2>
+          <h2 class="title" data-anim="decode">Where the work has gone.</h2>
           <div class="timeline" id="timeline">
             <span class="timeline__rail" aria-hidden="true"><span id="timelineFill"></span></span>
             <article class="tl-item" data-anim="up">
@@ -337,7 +354,7 @@
 
     <section class="section section--invert" id="syrix">
       <div class="wrap grid">
-        <header class="section__head">
+        <header class="section__head" data-anim="cmd">
           <span class="index">05</span>
           <span class="label">Syrix Vision Company</span>
         </header>
@@ -356,12 +373,12 @@
 
     <section class="section" id="open">
       <div class="wrap grid">
-        <header class="section__head">
+        <header class="section__head" data-anim="cmd">
           <span class="index">06</span>
           <span class="label">Open to</span>
         </header>
         <div class="section__body">
-          <h2 class="title" data-anim="lines">Currently open.</h2>
+          <h2 class="title" data-anim="decode">Currently open.</h2>
           <div class="offers" data-anim="stagger">
             <a class="offer" href="mailto:inconnuboytech@gmail.com?subject=Collaboration" data-spot>
               <span class="offer__status mono"><span class="pulse"></span><span>Open</span></span>

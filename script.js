@@ -191,6 +191,7 @@ async function loadGitHub() {
     document.getElementById("statLang").textContent = topLang;
 
     const top = own
+      .filter((r) => REPO_PINNED.includes(r.name.toLowerCase()))
       .sort((a, b) => (REPO_PINNED.includes(b.name.toLowerCase()) - REPO_PINNED.includes(a.name.toLowerCase())) || b.stargazers_count - a.stargazers_count || new Date(b.pushed_at) - new Date(a.pushed_at))
       .slice(0, 6);
 
